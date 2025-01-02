@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url(output.jpg) no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            color: #fff;
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+        }
+
+        .form-container input, .form-container select, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            background: black;
+            color: wheat;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-container button:hover {
+            background: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Team Registration</h2>
+        <form action="pageend.html" method="POST">
+            <label for="team-name">Team Name</label>
+            <input type="text" id="team-name" name="team-name" placeholder="Enter your team name" required>
+
+            <label for="team-leader">Team Leader</label>
+            <input type="text" id="team-leader" name="team-leader" placeholder="Enter team leader's name" required>
+
+            <label for="leader-email">Leader's Email</label>
+            <input type="email" id="leader-email" name="leader-email" placeholder="Enter team leader's email" required>
+
+            <label for="members">Team members</label>
+            <input type="number" id="members" name="members" placeholder="Enter number of members" min="1" max="10" required>
+            
+            <label for="phone number">Phone number </label>
+            <input type="number" id="phone number" name="members" placeholder="Enter phone number" >
+
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="gaming">Gaming</option>
+                <option value="sports">Sports</option>
+                <option value="quiz">Quiz</option>
+                <option value="other">Other</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
